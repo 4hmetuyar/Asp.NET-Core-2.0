@@ -28,6 +28,13 @@ namespace FirstApp
             services.AddScoped<IProductService, ProductManager>();//Olurda biri senden IProductService isterse git ona arkada Product Manager newle ve onu ver.
 
             services.AddScoped<IProductDal, EfProductDal>();
+            
+            services.AddSingleton<IProductService, ProductManager>();//Bir kere instanse oluþturulur. Herkes o instance kullanýr.
+                                                                     //A kullanýcý bir istekte bulunduðunda bir kere instance alýnýr b kullanýcý da instance istediði zaman a kullanýcýsýnýn instance kullanýlýr.
+
+
+          //  services.AddScoped<>(); Her action için bir tane instance üretir.
+
             services.AddMvc(); 
 
 
