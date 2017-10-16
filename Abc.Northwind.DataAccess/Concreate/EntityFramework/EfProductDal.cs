@@ -7,7 +7,7 @@ using Abc.Northwind.Entites.Concreate;
 
 namespace Abc.Northwind.DataAccess.Concreate.EntityFramework
 {
-   public  class EfProductDal : EfEntityRepositoryBase<Product,NorthwindContent> ,IProductDal
+   public  class EfProductDal : EfEntityRepositoryBase<Product,NorthwindContext> ,IProductDal
     {
         //Autofact gibi container tanımlamak için oluşturduk.
     }

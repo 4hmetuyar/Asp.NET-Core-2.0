@@ -8,4 +8,12 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abc.Core\Abc.Core.csproj" />
+    <ProjectReference Include="..\Abc.Northwind.Business\Abc.Northwind.Business.csproj" />
+    <ProjectReference Include="..\Abc.Northwind.Entites\Abc.Northwind.Entites.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Product\" />
+  </ItemGroup>
 </Project>

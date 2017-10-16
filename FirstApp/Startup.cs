@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Abc.Northwind.Business.Apstract;
+using Abc.Northwind.Business.Concreate;
+using Abc.Northwind.DataAccess.Apstract;
+using Abc.Northwind.DataAccess.Concreate.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,13 +22,18 @@ namespace FirstApp
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //Alt katmanlardan gelen servis katmanlarýmýzý burada tanýmlýyoruz. Yani DI burada gerçekleþecek.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddScoped<IProductService, ProductManager>();//Olurda biri senden IProductService isterse git ona arkada Product Manager newle ve onu ver.
+
+            services.AddScoped<IProductDal, EfProductDal>();
+            services.AddMvc(); 
+
+
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //Midleware yapýlandýrmasý gerçekleþtirdiðimiz yer.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

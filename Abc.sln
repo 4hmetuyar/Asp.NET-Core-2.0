@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.WebUI", "FirstApp\Abc.Northwind.WebUI.csproj", "{F37EAEF9-ED19-429F-B99D-CE592C01EB8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abc.Northwind.WebUI", "FirstApp\Abc.Northwind.WebUI.csproj", "{F37EAEF9-ED19-429F-B99D-CE592C01EB8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Core", "Abc.Core\Abc.Core.csproj", "{32B6BA0A-A095-4C6A-B37D-0888F867DB75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abc.Core", "Abc.Core\Abc.Core.csproj", "{32B6BA0A-A095-4C6A-B37D-0888F867DB75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.Entites", "Abc.Northwind.Entites\Abc.Northwind.Entites.csproj", "{C8354EA4-7D58-43FC-B3A8-55C2101E0010}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abc.Northwind.Entites", "Abc.Northwind.Entites\Abc.Northwind.Entites.csproj", "{C8354EA4-7D58-43FC-B3A8-55C2101E0010}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.DataAccess", "Abc.Northwind.DataAccess\Abc.Northwind.DataAccess.csproj", "{4098CB88-B68F-47B5-BB07-CA38D3B347F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abc.Northwind.DataAccess", "Abc.Northwind.DataAccess\Abc.Northwind.DataAccess.csproj", "{4098CB88-B68F-47B5-BB07-CA38D3B347F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.Business", "Abc.Northwind.Business\Abc.Northwind.Business.csproj", "{A7E57EB6-4346-4CB4-B716-15DAECBBE540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abc.Northwind.Business", "Abc.Northwind.Business\Abc.Northwind.Business.csproj", "{A7E57EB6-4346-4CB4-B716-15DAECBBE540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
