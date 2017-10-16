@@ -4,7 +4,7 @@ using Abc.Northwind.Entites.Concreate;
 
 namespace Abc.Northwind.DataAccess.Concreate.EntityFramework
 {
-    public  class EfCategoryDal : EfEntityRepositoryBase<Product,NorthwindContent> ,ICategorytDal
+    public  class EfCategoryDal : EfEntityRepositoryBase<Category,NorthwindContext> ,ICategorytDal
     {
     }
 }
