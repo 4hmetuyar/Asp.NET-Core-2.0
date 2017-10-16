@@ -1,0 +1,5 @@
+﻿Veri erişim katmanı direk olarak bu katmanda çağrılmamalıdır.
+
+Veri erişim katmanının arayüzü çağrılmalıdır.
+
+Arayüz kodları burada olmamalıdır. Örnek Olarak Session Kodlaması.
