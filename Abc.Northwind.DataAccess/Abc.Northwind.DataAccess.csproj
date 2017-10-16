@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Apstract\" />
     <Folder Include="Concreate\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Abc.Core\Abc.Core.csproj" />
+    <ProjectReference Include="..\Abc.Northwind.Entites\Abc.Northwind.Entites.csproj" />
   </ItemGroup>
 
 </Project>
