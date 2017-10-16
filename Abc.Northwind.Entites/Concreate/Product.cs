@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abc.Core.Entities;
 
 namespace Abc.Northwind.Entites.Concreate
 {
-    public class Product
+    public class Product :IEntity
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
