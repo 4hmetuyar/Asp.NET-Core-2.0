@@ -16,7 +16,7 @@ namespace Abc.Northwind.WebUI.Middlewares
             var provider = new PhysicalFileProvider(path);
 
             var option = new StaticFileOptions();
-            option.RequestPath = "/node_modules"; //Sana bu adresden bir request gelirse onu yukarıda verdiğim roota yönlendir.
+            option.RequestPath = "/node_modules";                                       //Sana bu adresden bir request gelirse onu yukarıda verdiğim roota yönlendir.
             option.FileProvider = provider;
 
             app.UseStaticFiles(option);

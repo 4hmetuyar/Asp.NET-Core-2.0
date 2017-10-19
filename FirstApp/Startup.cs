@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Abc.Northwind.Business.Apstract;
 using Abc.Northwind.Business.Concreate;
 using Abc.Northwind.DataAccess.Apstract;
@@ -30,8 +26,11 @@ namespace FirstApp
 
             services.AddScoped<IProductDal, EfProductDal>();
             
-            services.AddSingleton<IProductService, ProductManager>();//Bir kere instanse oluþturulur. Herkes o instance kullanýr.
-                                                                     //A kullanýcý bir istekte bulunduðunda bir kere instance alýnýr b kullanýcý da instance istediði zaman a kullanýcýsýnýn instance kullanýlýr.
+           // services.AddSingleton<IProductService, ProductManager>();//Bir kere instanse oluþturulur. Herkes o instance kullanýr.
+                                                                     //A kullanýcý bir istekte bulunduðunda bir kere instance alýnýr 
+                                                                     //b kullanýcý da instance istediði zaman a kullanýcýsýnýn instance kullanýlýr.
+
+              
 
 
           //  services.AddScoped<>(); Her action için bir tane instance üretir.
@@ -54,11 +53,11 @@ namespace FirstApp
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseStaticFiles(); //sabit modülleri wwwroot içinde alyans vermek için kullandýk.
+            app.UseStaticFiles();                                                            //sabit modülleri wwwroot içinde alyans vermek için kullandýk.
             app.UseNodeModules(env.ContentRootPath);
 
             app.UseMvc(routes =>
-            {
+            {                   
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
