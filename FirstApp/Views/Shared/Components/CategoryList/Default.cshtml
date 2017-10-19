@@ -1,2 +1,7 @@
 ﻿@model Abc.Northwind.WebUI.Model.CategoryListViewModel
 
+
+@*@foreach (var thumb in Model)
+{
+    <img src="@Url.Content("~/content/images/")@thumb.FileName" alt="@thumb.Title" />
+}*@

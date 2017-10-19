@@ -13,7 +13,4 @@
     <ProjectReference Include="..\Abc.Northwind.Business\Abc.Northwind.Business.csproj" />
     <ProjectReference Include="..\Abc.Northwind.Entites\Abc.Northwind.Entites.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Product\" />
-  </ItemGroup>
 </Project>

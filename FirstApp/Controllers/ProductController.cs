@@ -22,7 +22,12 @@ namespace Abc.Northwind.WebUI.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            _productService.GetAll()
+         //   _productService.GetAll();
+            return View();
+        }
+
+        public IActionResult Create()
+        {
             return View();
         }
     }
