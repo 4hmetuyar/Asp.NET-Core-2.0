@@ -1,7 +1,15 @@
 ﻿@model Abc.Northwind.WebUI.Model.CategoryListViewModel
 
 
+<ul>
+    @foreach (var item in Model.Categories)
+    {
+        <li>@item.CategoryName</li>
+    }
+</ul>
+
+
 @*@foreach (var thumb in Model)
-{
-    <img src="@Url.Content("~/content/images/")@thumb.FileName" alt="@thumb.Title" />
-}*@
+    {
+        <img src="@Url.Content("~/content/images/")@thumb.FileName" alt="@thumb.Title" />
+    }*@

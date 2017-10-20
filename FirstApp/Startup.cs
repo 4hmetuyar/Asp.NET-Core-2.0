@@ -1,4 +1,4 @@
-using Abc.Northwind.Business.Apstract;
+ï»¿using Abc.Northwind.Business.Apstract;
 using Abc.Northwind.Business.Concreate;
 using Abc.Northwind.DataAccess.Apstract;
 using Abc.Northwind.DataAccess.Concreate.EntityFramework;
@@ -19,28 +19,27 @@ namespace FirstApp
 
         public IConfiguration Configuration { get; }
 
-        //Alt katmanlardan gelen servis katmanlarýmýzý burada tanýmlýyoruz. Yani DI burada gerçekleþecek.
+        //Alt katmanlardan gelen servis katmanlarÃ½mÃ½zÃ½ burada tanÃ½mlÃ½yoruz. Yani DI burada gerÃ§ekleÃ¾ecek.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IProductService, ProductManager>();//Olurda biri senden IProductService isterse git ona arkada Product Manager newle ve onu ver.
-
             services.AddScoped<IProductDal, EfProductDal>();
             
-           // services.AddSingleton<IProductService, ProductManager>();//Bir kere instanse oluþturulur. Herkes o instance kullanýr.
-                                                                     //A kullanýcý bir istekte bulunduðunda bir kere instance alýnýr 
-                                                                     //b kullanýcý da instance istediði zaman a kullanýcýsýnýn instance kullanýlýr.
 
-              
+            //services.AddTransient<IProductService, ProductManager>();
+            //services.AddTransient<IProductDal, EfProductDal>();
+            //A kullanÄ±cÄ±sÄ± aynÄ± anda bir nesneye ihtiyaÃ§ duyduÄŸu zaman o nesne bir defa Ã¼retilir.
 
-
-          //  services.AddScoped<>(); Her action için bir tane instance üretir.
-
+            // services.AddSingleton<IProductService, ProductManager>();
+            //Bir kere instanse oluÃ¾turulur. Herkes o instance kullanÃ½r.
+            //A kullanÃ½cÃ½ bir istekte bulunduÃ°unda bir kere instance alÃ½nÃ½r 
+            //b kullanÃ½cÃ½ da instance istediÃ°i zaman a kullanÃ½cÃ½sÃ½nÃ½n instance kullanÃ½lÃ½r.
             services.AddMvc(); 
 
 
         }
 
-        //Midleware yapýlandýrmasý gerçekleþtirdiðimiz yer.
+        //Midleware yapÃ½landÃ½rmasÃ½ gerÃ§ekleÃ¾tirdiÃ°imiz yer.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -55,6 +54,8 @@ namespace FirstApp
 
             app.UseStaticFiles();                                                            
             app.UseNodeModules(env.ContentRootPath);
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {                   

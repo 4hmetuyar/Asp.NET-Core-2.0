@@ -18,7 +18,7 @@ namespace Abc.Northwind.WebUI.ViewComponents
             _categoryService = categoryService;
         }
 
-        public ViewViewComponentResult Invoke()
+        public ViewViewComponentResult Invoke(str)
         {
             var model = new CategoryListViewModel
             {
