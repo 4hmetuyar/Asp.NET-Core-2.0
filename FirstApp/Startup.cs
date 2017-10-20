@@ -53,7 +53,7 @@ namespace FirstApp
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseStaticFiles();                                                            //sabit modülleri wwwroot içinde alyans vermek için kullandýk.
+            app.UseStaticFiles();                                                            
             app.UseNodeModules(env.ContentRootPath);
 
             app.UseMvc(routes =>

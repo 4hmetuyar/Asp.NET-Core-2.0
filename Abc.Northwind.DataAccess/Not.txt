@@ -1,9 +1,0 @@
-﻿Veri erişim katmanı sadece veri tananı işlemlerinin yapıldığı katmandır. insort update delete v.b
-
-Business ve transaction işlemleri bu katmanda yapılamaz. 
-
-Concreate : Somut nesneler. Yani entity framawork ile ilgili bir işlem yapılacaksa kod buraya yazılmalı.
-
-Apstract : iş katmanın iletişim kuracağı katmandır. 
-
-Business hiçbir zaman veri erişim katmanını newleyemez.

@@ -3,3 +3,5 @@
 Veri erişim katmanının arayüzü çağrılmalıdır.
 
 Arayüz kodları burada olmamalıdır. Örnek Olarak Session Kodlaması.
+
+Backendin çıkış noktasıdır. Repository deseni veri erişim katmanında kullanılması gerekir.

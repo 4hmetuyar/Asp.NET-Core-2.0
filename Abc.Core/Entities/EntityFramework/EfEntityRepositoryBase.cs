@@ -45,7 +45,7 @@ namespace Abc.Core.Entities.EntityFramework
         {
             using (var context = new TContext())
             {
-                var addedEntiy = context.Entry(entity); //Nesne Set Edilir.
+                var addedEntiy = context.Entry(entity);
                 addedEntiy.State = EntityState.Modified;
                 context.SaveChanges();
             }
@@ -55,7 +55,7 @@ namespace Abc.Core.Entities.EntityFramework
         {
             using (var context = new TContext())
             {
-                var addedEntiy = context.Entry(entity); //Nesne Set Edilir.
+                var addedEntiy = context.Entry(entity); 
                 addedEntiy.State = EntityState.Deleted;
                 context.SaveChanges();
             }
